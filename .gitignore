@@ -1,9 +1,7 @@
 /*
-!src/
-!libs/
 !.idea
 !com.xmls/
 !pom.xml
 !README.md
 !.gitignore
-!testmodules
+!package-lock.json
