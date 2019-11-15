@@ -1,0 +1,7 @@
+{
+  "name": "js-denv-selenium",
+  "private": true,
+  "devDependencies": {
+    "selenium-webdriver": "^2.53.3"
+  }
+}
