@@ -24,6 +24,7 @@ async function coinFlex() {
         await findAnyElement(By.xpath("//div[@class='order-buttons order-confirmation-buttons']//button[contains(@class, 'btn-buy')]")).then(clickElement);
         await findAnyElement(By.xpath("//div[@class='order-buttons']//button[contains(@class, 'btn-flip-sell')]")).then(clickElement);
         await findAnyElement(By.xpath("//div[@data-help-id='orderticket-panel001']//span[contains(., '100%')]")).then(clickElement);
+        await driver.findElement(By.xpath("//div[@data-help-id='orderticket-panel003']//input")).sendKeys(20000);
         await findAnyElement(By.xpath("//div[@class='order-buttons']//button[contains(@class, 'btn-sell-broker')]")).then(clickElement);
         await findAnyElement(By.xpath("//div[@class='order-buttons order-confirmation-buttons']//button[contains(@class, 'btn-sell')]")).then(clickElement);
     } catch (e) {
