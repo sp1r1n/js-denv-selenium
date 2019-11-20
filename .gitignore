@@ -1,8 +1,9 @@
 /*
-!.idea/*
-!.workspace.xml
-!com.xmls/
+
+!src/
+!libs/
+!xmls/
 !pom.xml
 !README.md
 !.gitignore
-!package-lock.json
+!testmodules
