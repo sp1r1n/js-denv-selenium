@@ -9,7 +9,7 @@ async function cinemaCity() {
             await driver.wait(until.elementsLocated(By.xpath("//p[contains(.,'24 Nov 2019')]", 2000)));
             await findAnyElement(By.xpath("//p[contains(.,'24 Nov 2019')]")).then(clickElement);
             await driver.wait(until.elementsLocated(By.xpath("//h1[contains(.,'The Cave')]//following::button[contains(.,'16:15')]", 2000)));
-            await findAnyElement(By.xpath("//h1[contains(.,'The Cave')]//following::button[contains(.,'16:15')]")).then(clickElement);
+            await findAnyElement(By.xpath("//h1[contains(.,'The Cave')]//following::button[contains(.,'18:15')]")).then(clickElement);
             await driver.wait(until.elementsLocated(By.xpath("//button[@class='button-seat seat-available']", 2000)));
             await findAnyElement(By.xpath("//button[@class='button-seat seat-available']")).then(clickElement);
             await driver.wait(until.elementsLocated(By.xpath("//button[contains(@class, 'button-continue btn-block is-selected')]", 2000)));
