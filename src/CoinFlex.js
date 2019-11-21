@@ -13,26 +13,33 @@ async function coinFlex() {
         await findAnyElement(By.xpath("//a[contains(.,'TT Bracket')]")).then(clickElement);
         await findAnyElement(By.xpath("//div[@name='StopOrderType_ctrl']//span[@class='caret']")).then(clickElement);
         await findAnyElement(By.xpath("//a[contains(.,'TT Stop')]")).then(clickElement);
+
+        await driver.wait(until.elementLocated(By.xpath("//div[@data-help-id='orderticket-panel002']//input", 3000)));
+        await driver.findElement(By.xpath("//div[@data-help-id='orderticket-panel002']//input")).clear();
+        await driver.findElement(By.xpath("//div[@data-help-id='orderticket-panel002']//input")).click();
+        await driver.findElement(By.xpath("//div[@data-help-id='orderticket-panel002']//input")).sendKeys(0.0001);
+/*
+        await findAnyElement(By.xpath("//div[@class='quantity-price-wrapper']//label[contains(.,'Quantity')]']")).then(clickElement);
+*/
+
         await driver.wait(until.elementLocated(By.xpath("//div[@name='ProfitTarget_ctrl']//input"), 3000));
         await driver.findElement(By.xpath("//div[@name='ProfitTarget_ctrl']//input")).clear();
         await driver.findElement(By.xpath("//div[@name='ProfitTarget_ctrl']//input")).sendKeys(5000);
         await driver.wait(until.elementLocated(By.xpath("//div[@name='StopTarget_ctrl']//input"), 3000));
         await driver.findElement(By.xpath("//div[@name='StopTarget_ctrl']//input")).clear();
         await driver.findElement(By.xpath("//div[@name='StopTarget_ctrl']//input")).sendKeys(5000);
-        await driver.wait(until.elementLocated(By.xpath("//div[@data-help-id='orderticket-panel002']//input", 3000)));
-        await driver.findElement(By.xpath("//div[@data-help-id='orderticket-panel002']//input")).clear();
-        await driver.findElement(By.xpath("//div[@data-help-id='orderticket-panel002']//input")).click();
-        await driver.findElement(By.xpath("//div[@data-help-id='orderticket-panel002']//input")).sendKeys(0.0001);
-        await findAnyElement(By.xpath("//*[@data-help-id='OrderTicket-titlebar001']")).then(clickElement);
-/*
-        await findAnyElement(By.xpath("//div[@data-help-id='orderticket-panel001']//span[contains(., '100%')]")).then(clickElement);
-*/
-        await findAnyElement(By.xpath("//div[@class='widget-alert']/div[@class='close-btn']")).then(clickElement);
+        await driver.wait(until.elementLocated(By.xpath("//div[@data-help-id='orderticket-panel003']//input", 3000)));
+        await driver.findElement(By.xpath("//div[@data-help-id='orderticket-panel003']//input")).clear();
+        await driver.findElement(By.xpath("//div[@data-help-id='orderticket-panel003']//input")).click();
+        await driver.findElement(By.xpath("//div[@data-help-id='orderticket-panel003']//input")).sendKeys(20000);
+
         await findAnyElement(By.xpath("//div[@class='order-buttons']//button[contains(@class, 'btn-buy-broker')]")).then(clickElement);
         await findAnyElement(By.xpath("//div[@class='order-buttons order-confirmation-buttons']//button[contains(@class, 'btn-buy')]")).then(clickElement);
         await findAnyElement(By.xpath("//div[@class='order-buttons']//button[contains(@class, 'btn-flip-sell')]")).then(clickElement);
-        await findAnyElement(By.xpath("//div[@data-help-id='orderticket-panel001']//span[contains(., '100%')]")).then(clickElement);
+
         await driver.wait(until.elementLocated(By.xpath("//div[@data-help-id='orderticket-panel003']//input", 3000)));
+        await driver.findElement(By.xpath("//div[@data-help-id='orderticket-panel003']//input")).clear();
+        await driver.findElement(By.xpath("//div[@data-help-id='orderticket-panel003']//input")).click();
         await driver.findElement(By.xpath("//div[@data-help-id='orderticket-panel003']//input")).sendKeys(20000);
         await findAnyElement(By.xpath("//div[@class='order-buttons']//button[contains(@class, 'btn-sell-broker')]")).then(clickElement);
         await findAnyElement(By.xpath("//div[@class='order-buttons order-confirmation-buttons']//button[contains(@class, 'btn-sell')]")).then(clickElement);
